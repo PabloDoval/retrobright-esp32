@@ -20,7 +20,10 @@ namespace Retrobright
 
             void NextOption();                             // Move right in the menu
             void PreviousOption();                         // Move left in the menu
-            void SelectOption();                           // Select the current option  
+            void SelectOption();                           // Select the current option 
+
+            float GetTargetTemperature() const;
+            int GetTargetTime() const;
 
         private:
             TFT_eSPI tft;

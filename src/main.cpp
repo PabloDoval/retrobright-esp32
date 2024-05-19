@@ -2,12 +2,14 @@
 #include "temperature_manager.hpp"
 #include "ui_manager.hpp"
 #include "input_manager.hpp"
+#include "heating_system.hpp"
 
 using namespace Retrobright;
 
 TemperatureManager tempMgr;
 UiManager uiMgr;
-InputManager inputMgr; 
+InputManager inputMgr;
+HeatingSystem heatingSystem; 
 
 void setup() 
 {
@@ -27,4 +29,5 @@ void loop()
     tempMgr.Update();
     inputMgr.Update();
     uiMgr.Update(tempMgr);
+    heatingSystem.Update(tempMgr);
 }
